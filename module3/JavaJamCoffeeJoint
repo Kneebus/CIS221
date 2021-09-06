@@ -6,10 +6,18 @@
      </head>
      <body>
      <h1>JavaJam Coffee<h1>
+       <h3><i>Where Coffee and coding come together!</i></h3>
+       <ui>
+         <li>Coffee</li>
+         <li>Programming</li>
+         <li>Chill tunes</li>
+         <li>Nice people</li>
+       </ui>
      </body>
      
      <footer>
-     <t>1106 Houbolt Rd, Joliet, IL 60431</t>
+     <p>1106 Houbolt Rd, Joliet, IL 60431</p>
+       <p>Copyright 2021</p>
      </footer>
      
   <html>
