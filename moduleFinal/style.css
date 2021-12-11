@@ -1,18 +1,164 @@
-h1 {text-align: center; font-weight: bold; display: block;background-color: grey;}
-h2 {text-align: center; display: block; background-color: grey;}
-hr {width: 50%; border-width: 3px;}
-img {float: right; margin-left: 30px;}
-p {font-size: 19px; text-align: center; background-color: grey;}
-footer {text-align: center; display: block; background-color: grey;}
-nav { text-align: left; display: inline-block;background-color: darkgrey; padding-right: 20px;}
-nav ul {list-style-type: none ; padding-left: none;}
-nav a {text-decoration:none;}
+
+
 iframe {margin: auto 0px; display: block;}
-body{background-image: url(images/oriental-tiles.png); background-repeat: repeat;}
-main {background-color: grey;}
-/* nav a:link {color: #FEF6C2}
-nav a:visited {color: #D2B48C}
-nav a:hover {color: #CC9933} */
+
+
+/*--Nav--*/
+nav { text-align: left; 
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-weight: bold;
+    margin: auto;}
+
+nav ul {list-style-type: none; 
+    padding-left: none;}
+
+nav a {text-decoration:none;}
+
+nav a:link {color: dimgray}
+
+nav a:visited {color: slategrey}
+
+nav a:hover {color: white}
+
+/*Headings*/
+h1 {text-align: center;
+     font-weight: bold;}
+
+h2 {text-align: center;
+     display: block;}
+
+header {align-content: left;}
+
+/*Content*/
+p {font-size: 19px;
+     text-align: center;
+    margin: 10px;
+}
+
+footer {text-align: center;
+     display: grid;
+     justify-content: center;
+      align-content: center;}
+
+body{background-image: url(images/oriental-tiles.png);
+     background-repeat: repeat;}
+
+main { padding-bottom: 40px; }
+
+table {margin: 5px;
+min-height: 50px;}
+
+img {margin-left: 30px;}
+
+
+/*Table*/
+td {padding: 10px;}
+th {padding: 10px;}
+
 /* ------------------ id Selectors ---------------------- */
-#wrapper { margin-left: auto; margin-right: auto; max-width: 1280px;}
-#hat1 {background-image: url(images/Chapeaux_en_peau_de_castor.jpg); text-align: right; background-size: 65%; height: 250px;}
+#wrapper { margin-left: auto;
+     margin-right: auto;
+      max-width: 1280px;}
+
+#rightSide { 
+    grid-column-start: 3;
+    grid-column-end: 3;
+}
+
+/*--Grid Code--*/
+#page {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: auto auto 1fr auto;
+
+        grid-template-areas: 
+        "nav header header"
+        "table h2 img"
+        "video p footer";
+    
+        margin: auto;
+        max-width: 1500px;
+
+    
+        background-color: whitesmoke;
+    }
+
+header {
+    /* grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1; */
+
+    grid-area: header;
+
+}
+
+p {
+    /* grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 3; */
+
+    grid-area: p;
+
+}
+footer {
+    /* grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 3; */
+
+    grid-area: footer;
+}
+nav {
+    /* grid-column-start: 1;
+    grid-column-end: 1 ;
+    grid-row-start: 1;
+    grid-row-end: 1; */
+
+    grid-area: nav;
+    
+    background-color: darkslategrey; 
+}
+body h2 {
+    /* grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2; */
+
+    grid-area: h2;
+}
+table {
+    /* grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end:2; */
+
+    grid-area: table;
+}
+
+/*------Media Query------*/
+
+/*For phone only*/
+@media only screen and (max-width: 599px) {
+    p {background-color: turquoise;}
+
+    #page {
+        display: grid;
+        grid-template-columns: .5fr 1fr;
+        grid-template-rows: auto auto 1fr auto;
+
+        grid-template-areas: 
+        "nav header"
+        "table h2"
+        "video p"
+        "footer";
+    
+        margin: auto;
+        max-width: 1500px;
+
+    
+        background-color: whitesmoke;
+    }
+    
+}
