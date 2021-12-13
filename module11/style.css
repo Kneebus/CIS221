@@ -3,7 +3,7 @@ body {background-color: grey;
     max-width: 1500px;
     padding-top: 20px;}
     
-    /*-----Grid Code----*/
+    /*------Grid Code-----*/
     
     #grid {
         display: grid;
@@ -26,7 +26,7 @@ body {background-color: grey;
         margin: auto;
     }
     
-    /*----colors----*/
+    /*-----colors-----*/
     
     #black {
         grid-column-start: 1;
